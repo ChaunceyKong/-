@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    /*
+      id选择器   #id名称{}
+      必须保证全局唯一
+      优先级：不遵循就近原则： id选择器 > class选择器 > 标签选择器
+    */
+    #t1{
+      color: red;
+    }
+    .c1{
+      color: aqua;
+    }
+    h1{
+      color: bisque;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1 id="t1">标题1</h1>
+<h1 id="t2" class="c1">标题2</h1>
+<h1>标题3</h1>
+
+
+</body>
+</html>
