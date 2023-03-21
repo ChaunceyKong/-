@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<!--view层 模板-->
+<div id="app">
+    下拉框：
+    <select v-model="selected">
+        <option value="" disabled>---请选择---</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <p>
+        选中了谁：{{selected}}
+    </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            selected: ""
+        }
+    });
+</script>
+
+</body>
+</html>

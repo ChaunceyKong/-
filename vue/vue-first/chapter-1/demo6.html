@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<!--view层 模板-->
+<div id="app">
+    <!-- v-bind:接收参数=遍历参数 -->
+    <my-component v-for="item in items" v-bind:val="item"></my-component>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+
+    //定义一个vue组件
+    Vue.component("my-component",{
+        props: ['val'],
+        template: '<li>{{val}}</li>'
+    });
+
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            items: ["Java", "Linux", "windows"]
+        }
+    });
+</script>
+
+</body>
+</html>
